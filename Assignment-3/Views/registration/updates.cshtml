@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Assignment_3.Models.product>
+
+@{
+    ViewBag.Title = "updates";
+}
+
+
+<div class="container">
+    <br />
+    <br/>
+  
+
+    <form action="searchIndex" method="post">
+        <label>Product Title</label>
+        @Html.TextBox("searchString")
+        <button name="" value="" class="btn btn-default">Search</button>
+
+
+    </form>
+
+    @foreach (var item in Model)
+    {
+        <br />
+
+
+        <form action="rating" method="post">
+            <div class="card">
+                <div style="border:2px solid black ; border-radius: 5px; background-color:#7096bd">
+                    <h3 class="text-center">
+                        @Html.DisplayFor(modelItem => item.title)
+                    </h3>
+                </div>
+                <br />
+
+                <img src="~/images/@Html.DisplayFor(modelItem => item.picture)" width="50%" height="50%">
+                <br />
+                <div>
+                    <h3 class="display-4 ml-5">
+                        @Html.DisplayFor(modelItem => item.no_of_units) units left
+                    </h3>
+                    <p class="text-muted ml-5">
+                        @Html.DisplayFor(modelItem => item.demand) demands
+                        &nbsp;&nbsp;&nbsp;
+
+                        <button name="rating" value="@Html.DisplayFor(modelItem => item.title)" class="btn btn-default">Rating: @Html.DisplayFor(modelItem => item.rating)</button>
+
+                    </p>
+
+                </div>
+            </div>
+        </form>
+        <br />
+        <br />
+        <br />
+
+    }
+</div>
+

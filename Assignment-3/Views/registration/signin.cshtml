@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "signin";
+}
+
+<h2 class="text-center">YardStop</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-2 form-group">
+        </div>
+        <div class="col-md-8">
+            <form action="updates" method="post">
+                <label>Name</label>
+                <br />
+                @Html.TextBox("nam")
+                <br />
+                <br />
+                <label>Password</label>
+                <br />
+                @Html.TextBox("Pass")
+                <br />
+                <br />
+                <button name="update" value="" class="btn btn-default">Sign in</button>
+
+            </form>
+
+
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+
+</div>
+
+
+

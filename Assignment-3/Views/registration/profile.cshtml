@@ -1,0 +1,57 @@
+﻿@model Assignment_3.Models.registration
+
+<div class="text-center">
+    <h2>YardStop</h2>
+</div>
+<div class="container">
+    <br />
+    
+    
+    <div class="row">
+        <div class="col>
+            <div id="Aboutdata">
+                <div class="card bg-white">
+                    <div class="card-title">
+                        <div class="media">
+                            <div class="media-body">
+                                <h3 class="display-4 ml-5">@Model.first_name </h3>
+                                <p class="text-muted ml-5"> @Model.last_name </p>
+                                <div class="container">
+                                    <form action="change" method="post">
+                                        <table class="table table-responsive">
+                                            <tr>
+                                                <td class="text-muted">Email</td>
+                                                <td>:</td>
+                                                <td> @Model.email</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-muted">Password</td>
+                                                <td>:</td>
+                                                <td>@Model.password</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-muted">Phone</td>
+                                                <td>:</td>
+                                                <td>@Model.mobile_number</td>
+                                            </tr>
+
+
+                                        </table>
+                                        <button name="update" value="" class="btn btn-default">Edit</button>
+                                    </form>
+                                        
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>

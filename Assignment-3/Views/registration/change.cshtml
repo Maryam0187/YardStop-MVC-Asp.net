@@ -1,0 +1,33 @@
+﻿@model Assignment_3.Models.registration
+
+@{
+    ViewBag.Title = "change";
+}
+
+<h2>Edit profile</h2>
+<div class="row">
+    <div class="col-md-2 form-group">
+    </div>
+    <div class="col-md-8">
+        <form action="changesave" method="post">
+            @Html.HiddenFor(model => model.ID);
+            <label>First Name</label>
+            @Html.EditorFor(model => model.first_name, new { htmlAttributes = new { @class = "form-control" } })
+            <label>Last Name</label>
+            @Html.EditorFor(model => model.last_name, new { htmlAttributes = new { @class = "form-control" } })
+            <label>Email</label>
+            @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control" } })
+            <label>Mobile Number</label>
+            @Html.EditorFor(model => model.mobile_number, new { htmlAttributes = new { @class = "form-control" } })
+            <label>Password</label>
+            @Html.EditorFor(model => model.password, new { htmlAttributes = new { @class = "form-control" } })
+            <br />
+            <button name="update" value="" class="btn btn-default">Update</button>
+
+        </form>
+
+
+    </div>
+    <div class="col-md-2">
+    </div>
+</div>
